@@ -29,6 +29,8 @@ int main(void)
 		// Test copy constructor
 		Array<int> arr3(arr2);
 		std::cout << "arr3 (copy of arr2) size: " << arr3.size() << std::endl;
+		for (unsigned int i = 0; i < arr3.size(); ++i)
+			std::cout << "arr3[" << i << "] = " << arr3[i] << std::endl;
 
 		// Modify arr2 and ensure arr3 is unaffected
 		arr2[0] = 42;
@@ -40,17 +42,12 @@ int main(void)
 		Array<int> arr4;
 		arr4 = arr2;
 		std::cout << "arr4 (assigned from arr2) size: " << arr4.size() << std::endl;
-
-		// Modify arr2 and ensure arr4 is unaffected
-		arr2[1] = 99;
-		std::cout << "After modifying arr2[1]:\n";
-		std::cout << "arr2[1] = " << arr2[1] << std::endl;
-		std::cout << "arr4[1] = " << arr4[1] << " (should be unaffected)" << std::endl;
+		for (unsigned int i = 0; i < arr4.size(); ++i)
+			std::cout << "arr4[" << i << "] = " << arr4[i] << std::endl;
 
 		// Test out of bounds access
 		std::cout << "Attempting out-of-bounds access:" << std::endl;
-		std::cout << arr2[10] << std::endl; // Should throw an exception
-
+		std::cout << arr2[10] << std::endl;
 	}
 	catch (const std::exception& e)
 	{

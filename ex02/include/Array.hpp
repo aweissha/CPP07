@@ -6,7 +6,7 @@
 /*   By: aweissha <aweissha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 09:53:12 by aweissha          #+#    #+#             */
-/*   Updated: 2024/10/30 15:48:31 by aweissha         ###   ########.fr       */
+/*   Updated: 2024/11/02 15:14:43 by aweissha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ template <typename T> class Array
 	Array(const Array& original);
 	Array& operator=(const Array& original);
 	~Array();
-	
+
 	unsigned int size() const;
 	T& operator[](unsigned int n);
 	const T& operator[](unsigned int n) const;
